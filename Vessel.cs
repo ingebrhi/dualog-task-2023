@@ -44,6 +44,10 @@ class Vessel {
         Console.WriteLine("Enter how you would like to view speed (knots (KN) or meters per second (MS)):");
         string? view = Console.ReadLine();
 
+        if(view != null) {
+            view = view.ToUpper();
+        }
+
         if (view == "KN") {
             foreach (Vessel v in Vessels){
                 v.GetVesselInfo(view);
